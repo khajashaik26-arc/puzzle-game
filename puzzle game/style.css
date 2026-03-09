@@ -1,0 +1,105 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom right,#111,#000);
+    font-family:Arial;
+}
+
+.card{
+    background:#e6d2ac;
+    padding:35px;
+    border-radius:25px;
+    width:450px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+h1{
+    letter-spacing:2px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:none;
+    border-radius:15px;
+    font-size:16px;
+    background:linear-gradient(to right,#8b5a2b,#5a2f15);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+
+.fade{
+    animation:fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.topBar{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+}
+
+.progressContainer{
+    background:#c9b899;
+    height:10px;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+#progressBar{
+    height:100%;
+    width:0%;
+    background:#4caf50;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.questionBox{
+    background:#f1e4c8;
+    padding:20px;
+    border-radius:15px;
+    font-size:22px;
+    margin:15px 0;
+}
+
+.optionsGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.correct{
+    background:#4CAF50 !important;
+}
+
+.wrong{
+    background:#E53935 !important;
+}
+
+.feedback{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.controlButtons{
+    display:flex;
+    gap:10px;
+}

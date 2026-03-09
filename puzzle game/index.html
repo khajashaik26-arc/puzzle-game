@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+    <!-- MAIN MENU -->
+    <div id="mainMenu">
+        <h1>PUZZLE GAME</h1>
+        <button onclick="selectCategory('math')">🧮 Mathematics Puzzles</button>
+        <button onclick="selectCategory('brain')">🧠 Brain Booster</button>
+    </div>
+
+    <!-- LEVEL MENU -->
+    <div id="levelMenu" class="hidden">
+        <h2 id="levelTitle"></h2>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+        <button onclick="goMainMenu()">⬅ Back</button>
+    </div>
+
+    <!-- GAME PAGE -->
+    <div id="gamePage" class="hidden fade">
+
+        <div class="topBar">
+            <span id="gameTitle"></span>
+            <span>Q: <span id="qNumber">1</span>/20</span>
+            <span>Score: <span id="score">0</span></span>
+        </div>
+
+        <div class="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+
+        <div class="questionBox" id="questionText"></div>
+
+        <div class="optionsGrid" id="options"></div>
+
+        <p id="feedback" class="feedback"></p>
+
+        <div class="controlButtons">
+            <button onclick="pauseGame()">⏸ Pause</button>
+            <button onclick="exitGame()">❌ Exit</button>
+        </div>
+
+    </div>
+
+    <!-- RESULT PAGE -->
+    <div id="resultPage" class="hidden fade">
+        <h2>Game Over</h2>
+        <p>Your Score: <span id="finalScore"></span></p>
+        <p>🏆 High Score: <span id="highScore"></span></p>
+        <button onclick="goMainMenu()">🏠 Main Menu</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
